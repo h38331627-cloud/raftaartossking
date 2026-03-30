@@ -1,123 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raftaar Toss King</title>
 
-<title>ICC REPORTER | Official</title>
-
-<!-- META PIXEL -->
+<!-- 🔥 FACEBOOK PIXEL (Random ID Added) -->
 <script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){
-n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', 'YOUR_PIXEL_ID'); 
+fbq('init', '739182645019283'); 
 fbq('track', 'PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-</noscript>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
 <style>
-body{
-background:#020617;
-font-family:sans-serif;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
 }
-.title{
-font-size:2.5rem;
-font-weight:900;
-color:#22c55e;
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(2,6,23,0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
 }
-.subtitle{
-color:#38bdf8;
-font-weight:600;
+
+.logo {
+  width: 100px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
-.btn{
-animation:pulse 1.5s infinite;
+
+nav {
+  margin-top: 10px;
 }
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.08)}
-100%{transform:scale(1)}
+
+nav a {
+  margin: 0 12px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
-.card{
-background:#0f172a;
-border-radius:12px;
-padding:15px;
+
+nav a:hover {
+  color: #22c55e;
 }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #22c55e, #4ade80);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION */
+section {
+  padding: 40px 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  background: rgba(30,41,59,0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #334155;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #1e293b;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero h2 { font-size: 24px; }
+}
+
 </style>
 
 </head>
 
-<body class="flex items-center justify-center min-h-screen text-center text-white px-6">
+<body>
 
-<div class="max-w-md w-full">
+<header>
+  <img src="https://github.com/h38331627-cloud/raftaartossking/blob/main/raftar.jpg?raw=true" class="logo">
+  <h1>🏏 Raftaar Toss King</h1>
 
-<!-- TITLE -->
-<h1 class="title">ICC REPORTER</h1>
-<p class="subtitle">Cricket Match Analysis & Insights</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#live">Live</a>
+    <a href="#prediction">Prediction</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#news">News</a>
+  </nav>
+</header>
 
-<!-- TRUST BOX -->
-<div class="card mt-6 text-sm">
-📊 Data-Based Match Analysis <br>
-📢 Informational Purpose Only <br>
-🚫 No Betting / No Guaranteed Results
-</div>
+<section class="hero">
+  <h2>🔥 IPL 2026 LIVE UPDATES</h2>
+  <p>Toss Prediction • Live Score • Match Report</p>
 
-<!-- FEATURES -->
-<div class="mt-6 text-left text-sm space-y-2">
-<p>✔ Match Previews & Reports</p>
-<p>✔ Player Performance Analysis</p>
-<p>✔ Pitch & Stats Insights</p>
-<p>✔ Live Match Updates</p>
-</div>
+  <a href="https://t.me/+BvQgWuUnQe1mNWM1" class="btn">📢 Join Telegram</a>
+</section>
 
-<!-- CTA BUTTON -->
-<div class="mt-8">
-<a href="https://t.me/+Dq90SSqHoTg2ODJl" id="joinBtn">
-<button class="btn w-full py-4 rounded-xl font-bold text-black shadow-lg"
-style="background:linear-gradient(45deg,#22c55e,#4ade80);">
-👉 Join Free Telegram Channel
-</button>
-</a>
-</div>
+<!-- LIVE SCORE -->
+<section id="live">
+  <h2>🔴 Live Match</h2>
+  <iframe src="https://www.ipl.com/widget" width="100%" height="420" style="border-radius:10px;"></iframe>
+</section>
 
-<!-- SOCIAL PROOF -->
-<p class="mt-6 text-sm text-gray-300">
-🔥 Join Cricket Lovers Community
-</p>
+<!-- PREDICTION -->
+<section id="prediction">
+  <h2>🎯 Today Toss Prediction</h2>
 
-<!-- DISCLAIMER -->
-<div class="mt-6 text-[11px] text-gray-400 leading-relaxed">
-This platform provides cricket analysis and informational content only.  
-We do not promote betting, gambling, or guarantee any financial outcomes.  
-All decisions made by users are their own responsibility.
-</div>
+  <div class="card">
+    <h3>RR vs CSK</h3>
+    <p>👉 Toss Winner: CSK</p>
+    <p>👉 Match Winner: CSK</p>
+  </div>
+</section>
 
-</div>
+<!-- SCHEDULE -->
+<section id="schedule">
+  <h2>📅 Match Schedule</h2>
 
-<script>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Match</th>
+      <th>Time</th>
+    </tr>
 
-// TRACK REAL CLICK ONLY (SAFE)
-document.getElementById("joinBtn").addEventListener("click", () => {
-   fbq('track', 'Lead');
-});
+    <tr>
+      <td>30 March</td>
+      <td>RR vs CSK</td>
+      <td>7:30 PM</td>
+    </tr>
 
-</script>
+    <tr>
+      <td>31 March</td>
+      <td>PBKS vs GT</td>
+      <td>7:30 PM</td>
+    </tr>
+  </table>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <h2>📰 Latest News</h2>
+
+  <div class="card">
+    <h3>CSK Wins Thriller Match</h3>
+    <p>CSK defeated RR in a close game...</p>
+  </div>
+
+  <div class="card">
+    <h3>MI vs KKR Report</h3>
+    <p>High scoring IPL match...</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Raftaar Toss King</p>
+</footer>
 
 </body>
 </html>
