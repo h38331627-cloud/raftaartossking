@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raftaar Toss King</title>
 
 <!-- 🔥 Facebook Pixel -->
@@ -16,7 +16,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '572839104938271'); 
+fbq('init', '837462910284561'); 
 fbq('track', 'PageView');
 </script>
 
@@ -29,13 +29,13 @@ body{
   color:#fff;
 }
 
-/* APP FRAME (9:16 feel) */
+/* APP FRAME */
 .app{
   max-width:420px;
   margin:auto;
   min-height:100vh;
   background:linear-gradient(180deg,#020617,#0f172a);
-  padding-bottom:70px;
+  padding-bottom:80px;
 }
 
 /* HEADER */
@@ -53,25 +53,62 @@ body{
   border-radius:12px;
 }
 
+/* 🔥 NAME ANIMATION */
+.title{
+  animation: zoomText 2s infinite alternate;
+}
+
+@keyframes zoomText{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
 /* HERO */
 .hero{
   text-align:center;
   padding:25px 15px;
 }
 
-.hero h2{
-  font-size:20px;
-}
-
+/* 🔥 BUTTON ANIMATION */
 .btn{
+  position:relative;
   display:inline-block;
-  padding:10px 18px;
+  padding:12px 20px;
   margin-top:10px;
   background:#22c55e;
   border-radius:8px;
   text-decoration:none;
   color:#fff;
   font-weight:bold;
+  animation: zoomBtn 1.5s infinite alternate;
+  overflow:hidden;
+}
+
+@keyframes zoomBtn{
+  from{transform:scale(1);}
+  to{transform:scale(1.08);}
+}
+
+/* 🔥 WAVES EFFECT */
+.btn::before, .btn::after{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:8px;
+  background:rgba(255,255,255,0.3);
+  top:0;
+  left:0;
+  animation: wave 2s infinite;
+}
+
+.btn::after{
+  animation-delay:1s;
+}
+
+@keyframes wave{
+  0%{transform:scale(1);opacity:0.6;}
+  100%{transform:scale(1.8);opacity:0;}
 }
 
 /* SECTION */
@@ -90,10 +127,9 @@ body{
   margin-bottom:12px;
   border-radius:15px;
   backdrop-filter:blur(8px);
-  box-shadow:0 0 10px rgba(0,0,0,0.3);
 }
 
-/* SCROLL FIX */
+/* IFRAME */
 iframe{
   border:none;
   border-radius:10px;
@@ -115,7 +151,6 @@ iframe{
   color:#38bdf8;
   text-decoration:none;
   font-size:12px;
-  text-align:center;
 }
 </style>
 
@@ -128,13 +163,14 @@ iframe{
 <!-- HEADER -->
 <div class="header">
   <img src="https://github.com/h38331627-cloud/raftaartossking/blob/main/raftar.jpg?raw=true" class="logo">
-  <h3>Raftaar Toss King</h3>
+  <h3 class="title">Raftaar Toss King</h3>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <h2>🔥 IPL LIVE + TOSS PREDICTION</h2>
   <p>Fast Updates • Winning Tips</p>
+
   <a href="https://t.me/+BvQgWuUnQe1mNWM1" class="btn">Join Telegram</a>
 </div>
 
