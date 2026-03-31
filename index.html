@@ -1,156 +1,104 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raftaar Toss King</title>
 
-<!-- 🔥 Facebook Pixel -->
+<title>RAFTAAR TOSS KING Official</title>
+
+<!-- META PIXEL -->
+
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '837462910284561'); 
+fbq('init', '1848243332803562');
 fbq('track', 'PageView');
 </script>
 
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
-  font-family:'Segoe UI',sans-serif;
-  background:#000;
-  color:#fff;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+font-family:sans-serif;
 }
 
-/* APP FRAME */
-.app{
-  max-width:420px;
-  margin:auto;
-  min-height:100vh;
-  background:linear-gradient(180deg,#020617,#0f172a);
-  padding-bottom:80px;
+/* iPhone Frame */
+.phone{
+width:320px;
+height:640px;
+background:#0f172a;
+border-radius:40px;
+border:6px solid #111;
+box-shadow:0 0 40px rgba(0,0,0,0.8);
+overflow:hidden;
+position:relative;
 }
 
-/* HEADER */
-.header{
-  position:sticky;
-  top:0;
-  text-align:center;
-  padding:12px;
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(10px);
+/* Notch */
+.notch{
+width:150px;
+height:25px;
+background:#000;
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+border-bottom-left-radius:20px;
+border-bottom-right-radius:20px;
+z-index:10;
 }
 
-.logo{
-  width:65px;
-  border-radius:12px;
+/* Screen */
+.screen{
+padding:20px;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
 }
 
-/* 🔥 NAME ANIMATION */
-.title{
-  animation: zoomText 2s infinite alternate;
+/* Animations */
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.06)}
+100%{transform:scale(1)}
 }
 
-@keyframes zoomText{
-  from{transform:scale(1);}
-  to{transform:scale(1.1);}
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:25px 15px;
-}
-
-/* 🔥 BUTTON ANIMATION */
 .btn{
-  position:relative;
-  display:inline-block;
-  padding:12px 20px;
-  margin-top:10px;
-  background:#22c55e;
-  border-radius:8px;
-  text-decoration:none;
-  color:#fff;
-  font-weight:bold;
-  animation: zoomBtn 1.5s infinite alternate;
-  overflow:hidden;
+animation:pulse 1.6s infinite;
+transition:0.3s;
 }
 
-@keyframes zoomBtn{
-  from{transform:scale(1);}
-  to{transform:scale(1.08);}
+.btn:hover{
+transform:scale(1.1);
 }
 
-/* 🔥 WAVES EFFECT */
-.btn::before, .btn::after{
-  content:'';
-  position:absolute;
-  width:100%;
-  height:100%;
-  border-radius:8px;
-  background:rgba(255,255,255,0.3);
-  top:0;
-  left:0;
-  animation: wave 2s infinite;
+@keyframes blink{
+0%,100%{opacity:1}
+50%{opacity:0.3}
 }
 
-.btn::after{
-  animation-delay:1s;
-}
-
-@keyframes wave{
-  0%{transform:scale(1);opacity:0.6;}
-  100%{transform:scale(1.8);opacity:0;}
-}
-
-/* SECTION */
-.section{
-  padding:15px;
-}
-
-.section h3{
-  margin-bottom:10px;
-}
-
-/* CARD */
-.card{
-  background:rgba(255,255,255,0.06);
-  padding:15px;
-  margin-bottom:12px;
-  border-radius:15px;
-  backdrop-filter:blur(8px);
-}
-
-/* IFRAME */
-iframe{
-  border:none;
-  border-radius:10px;
-}
-
-/* BOTTOM NAV */
-.bottom-nav{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  max-width:420px;
-  display:flex;
-  justify-content:space-around;
-  background:#020617;
-  padding:10px 0;
-}
-
-.bottom-nav a{
-  color:#38bdf8;
-  text-decoration:none;
-  font-size:12px;
+.blink{
+animation:blink 1s infinite;
 }
 </style>
 
@@ -158,64 +106,84 @@ iframe{
 
 <body>
 
-<div class="app">
+<div class="phone">
 
-<!-- HEADER -->
-<div class="header">
-  <img src="https://github.com/h38331627-cloud/raftaartossking/blob/main/raftar.jpg?raw=true" class="logo">
-  <h3 class="title">Raftaar Toss King</h3>
+<div class="notch"></div>
+
+<div class="screen">
+
+<h1 class="text-2xl font-extrabold text-yellow-300">
+RAFTAAR TOSS KING
+</h1>
+
+<p class="text-orange-400 font-semibold">
+(Official Telegram)
+</p>
+
+<div class="mt-4 flex gap-2 items-center">
+<span class="text-red-400 font-bold blink">Join Fast</span>
+<span id="countdown" class="text-yellow-300 text-xl font-bold">30</span>
+<span>Sec</span>
 </div>
 
-<!-- HERO -->
-<div class="hero">
-  <h2>🔥 IPL LIVE + TOSS PREDICTION</h2>
-  <p>Fast Updates • Winning Tips</p>
-
-  <a href="https://t.me/+BvQgWuUnQe1mNWM1" class="btn">Join Telegram</a>
+<div class="mt-4">
+<span class="text-red-500 text-xl font-bold">TOP</span>
+<span class="bg-gray-700 px-2 py-1 rounded">ACCURACY</span>
 </div>
 
-<!-- LIVE -->
-<div class="section">
-  <h3>🔴 Live Match</h3>
-  <iframe src="https://www.ipl.com/widget" width="100%" height="230"></iframe>
-</div>
+<p class="mt-3 text-sm text-gray-300">
+Daily Sure Updates 👇
+</p>
 
-<!-- PREDICTION -->
-<div class="section">
-  <h3>🎯 Today Prediction</h3>
-  <div class="card">
-    <p><b>RR vs CSK</b></p>
-    <p>👉 Toss: CSK</p>
-    <p>👉 Winner: CSK</p>
-  </div>
-</div>
+<a href="https://t.me/+BvQgWuUnQe1mNWM1" id="joinBtn" class="w-full mt-6">
+<button class="btn w-full py-3 rounded-xl font-bold text-white"
+style="background:linear-gradient(45deg,#00f2ff,#007bff);">
+JOIN TELEGRAM 🚀
+</button>
+</a>
 
-<!-- SCHEDULE -->
-<div class="section">
-  <h3>📅 Schedule</h3>
-  <div class="card">
-    <p>30 Mar - RR vs CSK</p>
-    <p>31 Mar - PBKS vs GT</p>
-  </div>
-</div>
+<p class="mt-5 text-xs text-gray-400">
+🔥 RAFTAAR TOSS KING 👑
+</p>
 
-<!-- NEWS -->
-<div class="section">
-  <h3>📰 Latest News</h3>
-  <div class="card">
-    <p>CSK won last match in thrilling finish...</p>
-  </div>
-</div>
+<p class="text-[10px] mt-3 text-gray-500">
+legal • no guarantee • play responsibly
+</p>
 
 </div>
-
-<!-- BOTTOM NAV -->
-<div class="bottom-nav">
-  <a href="#">🏠 Home</a>
-  <a href="#">🔴 Live</a>
-  <a href="#">🎯 Tips</a>
-  <a href="#">📅 Matches</a>
 </div>
+
+<script>
+let timeLeft = 30;
+let tracked = false;
+
+const countdown = document.getElementById("countdown");
+
+// TIMER
+const timer = setInterval(() => {
+countdown.innerText = timeLeft;
+timeLeft--;
+
+if(timeLeft === 10 && !tracked){
+   fbq('track', 'Lead');
+   tracked = true;
+}
+
+if(timeLeft < 0){
+clearInterval(timer);
+
+// redirect after slight delay
+setTimeout(()=>{
+window.location.href = "https://t.me/+BvQgWuUnQe1mNWM1";
+},800);
+}
+},1000);
+
+// BUTTON CLICK TRACK
+document.getElementById("joinBtn").addEventListener("click", () => {
+fbq('track', 'Lead');
+});
+</script>
 
 </body>
 </html>
